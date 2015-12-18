@@ -128,4 +128,3 @@
 "Ziggs http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/Ziggs.png",
 "Zilean http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/Zilean.png",
 "Zyra http://ddragon.leagueoflegends.com/cdn/5.24.2/img/champion/Zyra.png",
-"",
