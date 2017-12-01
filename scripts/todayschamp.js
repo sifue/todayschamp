@@ -12,16 +12,20 @@
 // let images = document.querySelectorAll('li > div > span > a > img');
 // let messages = [];
 // titles.forEach((e, i) => {
-// 	let m = e.innerText + ' ' + images[i].src;
-// 	messages.push(m);
-// 	});
+//     let m = e.innerText + ' ' + images[i].src;
+//     messages.push(m);
+//     });
 // console.log(messages.join('\n'));
 'use strict';
 module.exports = (robot) => {
-	robot.hear(/(.+)/i, (msg) => {
-		let text = run(msg.message.user.name, msg.match[1]);
-		msg.send(text);
-	});
+    robot.hear(/(.+)/i, (msg) => {
+        let username = msg.message.user.profile.display_name;
+        if(!username) {
+            username = msg.message.user.name;
+        }
+        let text = run(username, msg.match[1]);
+        msg.send(text);
+    });
 };
 
 let all_list = [
