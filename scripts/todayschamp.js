@@ -19,7 +19,10 @@
 'use strict';
 module.exports = (robot) => {
     robot.hear(/(.+)/i, (msg) => {
-        let username = msg.message.user.profile.display_name;
+        let username = null;
+        if(msg.message.user.profile) {
+            username = msg.message.user.profile.display_name;
+        }
         if(!username) {
             username = msg.message.user.name;
         }
